@@ -11,7 +11,9 @@ public class SongFile {
 
 	@Override
 	public String toString() {
-		return file.getName();
+		String name = file.getName();
+		name = name.substring(0, name.lastIndexOf('.'));
+		return name;
 	}
 
 	public File getFile() {
